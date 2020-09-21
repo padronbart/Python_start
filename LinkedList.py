@@ -29,3 +29,15 @@ class LinkedList:
 
     def top(self):
         '''Retorna el valor de la cabeza del linked list'''
+        if self.is_empty():
+            print("Vacio")
+        return self._head._element
+
+    def pop(self):
+        '''Elimina el elmento pricipal de la lista'''
+        if self.is_empty():
+            print("Vacio")
+        answer = self._head._element
+        self._head = self._head._next
+        self._size -= 1
+        return answer
