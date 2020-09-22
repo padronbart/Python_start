@@ -41,3 +41,16 @@ class LinkedList:
         self._head = self._head._next
         self._size -= 1
         return answer
+
+w = LinkedList()
+w.push(5)
+w.push(8)
+w.push(10)
+w.push(5)
+print(w.__len__())
+w.push(25)
+w.push(180)
+print(w.top())
+w.pop()
+w.pop()
+print(w.top())
