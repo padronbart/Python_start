@@ -46,3 +46,32 @@ class Tree:
     def is_empty(self):
         '''Retorna true si el arbol esta vacio'''
         return len(self) == 0
+
+
+class BinaryTree(Tree):
+    '''Clase abstracta de una etrucutra de arbol binario'''
+    def left(self, p):
+        '''Retorna la posicion del hijo izquierdo'''
+        raise NotImplementedError('Debe ser implementado por una subclase')
+
+    def right(self, p):
+        '''Retorna la posicion del hijo derecho'''
+        raise NotImplementedError('Debe ser implementado por una subclase')
+
+    def sibiling(self,p):
+        '''Retorna la posicion de un familiar'''
+        parent = self.parent(p)
+        if parent is None:
+            return  None
+        else:
+            if p == self.left(parent):
+                return self.right(parent)
+            else:
+                return self.left(parent)
+
+    def children(self, p):
+        '''Genera una iteracion de posciones representando los hijos de p'''
+        if self.left(p) is not None:
+            yield self.left(p)
+        if self.right(p) is not None:
+            yield self.right(o)
