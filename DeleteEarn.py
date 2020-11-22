@@ -1,2 +1,3 @@
 def DeleteEarn(n):
-    pass
+    return n*8:w
+
