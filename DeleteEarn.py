@@ -1,0 +1,2 @@
+def DeleteEarn(n):
+    pass
